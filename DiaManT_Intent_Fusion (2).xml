@@ -1,0 +1,55 @@
+<IntentFusion>
+
+  <!-- **************************************************************** -->
+  <!-- Diamant default policy :: Select ML NLU if confidence is over 65 -->
+  <!-- For rules with same priority :: the rearmost will prevail        -->
+  <!-- **************************************************************** -->
+<!--SOME NEW CHANGES !!! I want to add some new changes-->
+   <!-- Accept ML NLU result if confidence is above 0.65 -->
+   <FusionPolicy name="ML Intent confidence bigger than '0.65' :: Select ML NLU Intent" priority="3" selectSource="ml">
+    <FusionRuleGroup logicalOperator="AND">
+      <FusionRule source="ml" item="SystemAction" attribute="confidenceThreshold" value="0.65"/>
+    </FusionRuleGroup>
+   </FusionPolicy>
+
+   <!-- Accept any RB NLU result -->
+   <!-- <FusionPolicy name="RB Intent confidence bigger than '0' :: Select RB NLU Intent" priority="4" selectSource="rb">
+    <FusionRuleGroup logicalOperator="AND">
+      <FusionRule source="rb" item="Intent" attribute="confidenceThreshold" value="0"/>
+    </FusionRuleGroup>
+   </FusionPolicy> -->
+
+   <!-- Select the rule based model: 
+        when Intent status is Ambiguous 
+        and the Intent confidence triggered from the rule based NLU is bigger than '0' (the RB NLU brings back an Intent) -->
+   <FusionPolicy name="DM Intent status ambiguous and RB Intent confidence bigger than '0' :: Select RB NLU Intent" priority="4" selectSource="rb">
+    <FusionRuleGroup logicalOperator="AND">
+        <FusionRule source="dm" item="Intent" attribute="status" value="Ambiguous"/>
+        <FusionRule source="rb" item="Intent" attribute="name" value="null" negate="true"/>
+    </FusionRuleGroup>
+   </FusionPolicy>
+
+   <!-- Select the rule based model: 
+        The intent values 'Information' and 'Unknown' are 'too ambiguous' to be handled from the RB NLU therefore are excluded and handled from the ML NLU -->
+   <FusionPolicy name="DM Intent status ambiguous and RB Intent is 'Information' :: Select ML NLU Intent" priority="5" selectSource="ml">
+      <FusionRuleGroup logicalOperator="AND">
+        <FusionRule source="dm" item="Intent" attribute="status" value="Ambiguous"/>
+          <FusionRuleGroup logicalOperator="AND">
+            <FusionRuleGroup logicalOperator="OR">
+              <FusionRule source="rb" item="Intent" attribute="name" value="Information"/>
+          </FusionRuleGroup>
+        </FusionRuleGroup>
+      </FusionRuleGroup>
+   </FusionPolicy>
+
+   <!-- Carmax workaround for ticket MINIAPPS-1404 -->
+   <!-- <FusionPolicy name="DM Intent status ambiguous and value is 'Account.Number' :: Select ML NLU Intent (Carmax workaround)" priority="6" selectSource="ml">
+      <FusionRuleGroup logicalOperator="AND">
+        <FusionRule source="dm" item="Intent" attribute="status" value="Ambiguous"/>
+        <FusionRule source="dm" item="Intent" attribute="name" value="Account.Number"/>
+        <FusionRule source="ml" item="Intent" attribute="name" value="Account.Online"/>
+      </FusionRuleGroup>
+   </FusionPolicy> -->
+
+
+</IntentFusion>

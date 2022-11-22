@@ -3,8 +3,9 @@
     <Intents>
         <Intent name="Account-Inquiry" group="other" logName="Account-Inquiry" isSelfService="false"/>
         <Intent name="Etransfer-Troubleshooting" group="other" logName="Etransfer-Troubleshooting" isSelfService="false"/>
+       <!--New Changes!!-->
         <Intent name="Account-Blocked" group="other" logName="Account-Blocked" isSelfService="false"/>
-        <Intent name="Pin-Change_Pin" group="other" logName="Pin-Change_Pin" isSelfService="false"/>
+        <!-- <Intent name="Pin-Change_Pin" group="other" logName="Pin-Change_Pin" isSelfService="false"/> -->
         <Intent name="Etransfer-History" group="other" logName="Etransfer-History" isSelfService="false"/>
         <Intent name="Travel_Notification" group="other" logName="Travel_Notification" isSelfService="false"/>
         <Intent name="Etransfer-Cancellation" group="other" logName="Etransfer-Cancellation" isSelfService="false"/>
