@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Report>
+    <Intents>
+        <Intent name="Account-Inquiry" group="other" logName="Account-Inquiry" isSelfService="false"/>
+        <Intent name="Etransfer-Troubleshooting" group="other" logName="Etransfer-Troubleshooting" isSelfService="false"/>
+        <Intent name="Account-Blocked" group="other" logName="Account-Blocked" isSelfService="false"/>
+        <Intent name="Pin-Change_Pin" group="other" logName="Pin-Change_Pin" isSelfService="false"/>
+        <Intent name="Etransfer-History" group="other" logName="Etransfer-History" isSelfService="false"/>
+        <Intent name="Travel_Notification" group="other" logName="Travel_Notification" isSelfService="false"/>
+        <Intent name="Etransfer-Cancellation" group="other" logName="Etransfer-Cancellation" isSelfService="false"/>
+        <Intent name="Loan-PayOff" group="other" logName="Loan-PayOff" isSelfService="false"/>
+        <Intent name="Payment-Minimum_Payment" group="other" logName="Payment-Minimum_Payment" isSelfService="false"/>
+        <Intent name="Branch-Hours" group="other" logName="Branch-Hours" isSelfService="false"/>
+        <Intent name="Insurance-Cancel" group="other" logName="Insurance-Cancel" isSelfService="false"/>
+        <Intent name="Complaints" group="other" logName="Complaints" isSelfService="false"/>
+        <Intent name="Etransfer-SetUp" group="other" logName="Etransfer-SetUp" isSelfService="false"/>
+        <Intent name="Insurance-Payment" group="other" logName="Insurance-Payment" isSelfService="false"/>
+        <Intent name="Card-Activate_Debit" group="other" logName="Card-Activate_Debit" isSelfService="false"/>
+        <Intent name="Account-Open_Account" group="other" logName="Account-Open_Account" isSelfService="false"/>
+        <Intent name="Card-Activate" group="other" logName="Card-Activate" isSelfService="false"/>
+        <Intent name="Phone_Banking-PIN" group="other" logName="Phone_Banking-PIN" isSelfService="false"/>
+        <Intent name="Etransfer-Inquiry" group="other" logName="Etransfer-Inquiry" isSelfService="false"/>
+        <Intent name="Etransfer-Limit" group="other" logName="Etransfer-Limit" isSelfService="false"/>
+        <Intent name="Card-Change_Pin" group="other" logName="Card-Change_Pin" isSelfService="false"/>
+        <Intent name="Balance-Inquiry" group="other" logName="Balance-Inquiry" isSelfService="false"/>
+        <Intent name="Card-Lost_Stolen" group="other" logName="Card-Lost_Stolen" isSelfService="false"/>
+        <Intent name="BankAccount-Limit" group="other" logName="BankAccount-Limit" isSelfService="false"/>
+        <Intent name="Card" group="other" logName="Card" isSelfService="false"/>
+        <Intent name="Loan" group="other" logName="Loan" isSelfService="false"/>
+        <Intent name="Card-Make_Payment" group="other" logName="Card-Make_Payment" isSelfService="false"/>
+        <Intent name="Insurance" group="other" logName="Insurance" isSelfService="false"/>
+        <Intent name="Foreign_Exchange-Rates" group="other" logName="Foreign_Exchange-Rates" isSelfService="false"/>
+        <Intent name="Branch-Address" group="other" logName="Branch-Address" isSelfService="false"/>
+        <Intent name="Loan-Application" group="other" logName="Loan-Application" isSelfService="false"/>
+        <Intent name="Insurance-Renew" group="other" logName="Insurance-Renew" isSelfService="false"/>
+        <Intent name="BankAccount-Application" group="other" logName="BankAccount-Application" isSelfService="false"/>
+    </Intents>
+</Report>
